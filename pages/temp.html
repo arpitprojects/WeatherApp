@@ -1,0 +1,9 @@
+  <div class="panel-heading">Detail forecast for - </div>
+				  <div class="panel-body">
+					<p>{{convertToDate({ dt :weatherDay.dt}) | date : format : timezone}}</p>
+				  </div>
+
+				  <!-- List group -->
+				  <ul class="list-group">
+					<li class="list-group-item">DayTime Temp -  {{weatherDay.temp.day - 273.15}} deg Celcious</li>
+				  </ul>

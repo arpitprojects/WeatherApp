@@ -1,0 +1,31 @@
+<div class="col-sm-12">
+	<div>
+		<h4>ForeCast for {{city}}</h4>
+		<!--I HAVE A WEATHER RESYUT OBJECT-->
+		<hr>
+		<p>Choose no of days</p>
+		<form class="input-group">
+			<a href="#/fore/1" class="btn btn-default" ng-class="{'btn-primary' : days === '1'}">1 day </a>
+			<a href="#/fore/2" class="btn btn-default" ng-class="{'btn-primary' : days === '2'}">2 days </a>
+			<a href="#/fore/3" class="btn btn-default" ng-class="{'btn-primary' : days === '3'}">3 days </a>
+			<a href="#/fore/4" class="btn btn-default" ng-class="{'btn-primary' : days === '4'}">4 days </a>
+			<a href="#/fore/5" class="btn btn-default" ng-class="{'btn-primary' : days === '5'}">5 days </a>
+		</form>
+		<br><br>
+			<div ng-repeat="w in result.list">
+				       <div class="panel panel-default">
+				  <!-- Default panel contents -->
+				  <div class="panel-heading">Detail forecast for - </div>
+				  <div class="panel-body">
+					<p>{{convertToDate(w.dt)| date : format : timezone}}</p>
+				  </div>
+
+				  <!-- List group -->
+				  <ul class="list-group">
+					<li class="list-group-item">DayTime Temp -  {{w.temp.day - 273.15}} deg Celcious</li>
+				  </ul>
+				 </div>
+			</div>
+		<!---->
+	</div>
+</div>
